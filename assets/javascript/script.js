@@ -4,8 +4,8 @@ function appendRow(selector, id) {
 }
 
 //append new column to HTML. Takes in a selector, what gets inserted in the div, column specifics, and an ID name
-function appendCol(selector, inner, col, id) {
-    $(selector).append("<div class='col" + col + "' id='" + id + "'>" + inner + "</div>");
+function appendCol(selector, id, col) {
+    $(selector).append("<div class='col" + col + "' id='" + id + "'></div>");
 }
 
 function googleQuery(title) {
