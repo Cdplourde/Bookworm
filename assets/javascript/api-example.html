@@ -1,0 +1,32 @@
+<!-- // key: dAVpwWIztbqt3xOEfKHS5Q
+// secret: eHm9erUa9xLfkVLVzPNCPDGAlr7zJs57Tgmq398mdw GOODREADS -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() { //TODO: add button ID
+        // var query = $('#query').val().trim(); // TODO: get query ID
+        // console.log(query);
+        var googleBooks = 'https://www.googleapis.com/books/v1/volumes?q=' + "harry potter";
+        $.get(googleBooks)
+        .then(function(data) {
+        console.log('data', data);
+        var books = data.items;
+        var numBooksToGet = 10;
+        for (var i = 0; i < numBooksToGet; i++) {
+            console.log("hi");
+            var book = books[i];
+            $('body').append(`
+            <h2>${book.volumeInfo.title}</h2>
+            <img src='${book.volumeInfo.imageLinks.thumbnail}' class="book-image" />
+            <p class="book-description">${book.volumeInfo.description}</p>      
+            `);
+        }     
+        });
+    });    
+
+
+</script>
+
