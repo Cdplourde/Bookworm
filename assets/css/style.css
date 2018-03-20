@@ -39,7 +39,7 @@ nav .nav-link:hover {
     margin: 0px;
     padding: 0px;
     max-width: 100%!important;
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 290px);
 }
 
 .btn-lg {
