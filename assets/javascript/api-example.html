@@ -6,27 +6,50 @@
   crossorigin="anonymous"></script>
 
 <script>
+    // function createRow() {
+    //     $(".container").append("<div class='row'></div>");
+        
+    // }
+
+    // function createCol() {
+    //     $(".row:last-of-type").append("<div class='col'></div>");
+    // }
+
+    // function googleQuery(title) {
+    //     var googleBooks = 'https://www.googleapis.com/books/v1/volumes?q=' + title;
+    //     $.get(googleBooks).then(function(data) {
+
+    //     });
+    // }
+    // function semanticQuery() {
+
+    // }
+
+    // //search click event
+    // $(document).on("click", "#", function() { //TODO: get element ID
+    //     googleQuery($(this).text().trim());
+    // })
+
     $(document).ready(function() { //TODO: add button ID
         // var query = $('#query').val().trim(); // TODO: get query ID
         // console.log(query);
         var googleBooks = 'https://www.googleapis.com/books/v1/volumes?q=' + "harry potter";
-        $.get(googleBooks)
-        .then(function(data) {
+        $.get(googleBooks).then(function(data) {
         console.log('data', data);
         var books = data.items;
         var numBooksToGet = 10;
         for (var i = 0; i < numBooksToGet; i++) {
-            console.log("hi");
             var book = books[i];
             $('body').append(`
             <h2>${book.volumeInfo.title}</h2>
             <img src='${book.volumeInfo.imageLinks.thumbnail}' class="book-image" />
-            <p class="book-description">${book.volumeInfo.description}</p>      
+            <p class="book-description">${book.volumeInfo.description}</p>   
+            <p class="book-author">${book.volumeInfo.authors[0]}</p>   
             `);
         }     
         });
     });    
-
-
 </script>
+
+
 
