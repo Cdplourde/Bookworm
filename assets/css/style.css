@@ -1,0 +1,67 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+nav .nav-link {
+    /* border-top: 4px solid transparent;  */
+    border-bottom: 4px solid transparent; 
+}
+
+nav .nav-link:hover {
+    /* border-top: 4px solid #ffc107;  */
+    border-bottom: 4px solid #ffc107;
+}
+
+.page-wrapper {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 40px;
+}
+
+.showcase {
+    background-color: white;
+    background: url("https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb");
+    min-height: 200px;
+    opacity: 0.6;
+    border: 2px solid black;
+}
+
+.container {
+    position: relative;
+    background: url("../images/sprinkles.png");
+    /* background-color: beige; */
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%!important;
+    min-height: calc(100vh - 300px);
+}
+
+.btn-lg {
+    margin-top: 1px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.row {
+    margin: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+
+footer p {
+    color: lightgray;
+    margin-top: 14px;
+    margin-bottom: 0px;
+    font-size: 0.95em;
+}
