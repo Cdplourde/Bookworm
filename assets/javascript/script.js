@@ -3,7 +3,7 @@ function appendRow(selector, id) {
     $(selector).append("<div class='row' id='" + id + "'></div>");
 }
 
-//append new column to HTML. Takes in a selector, what gets inserted in the div, column specifics, and an ID name
+//append new column to HTML. Takes in a selector, what gets inserted in the div, column specifics (EX. "-md-6"), and an ID name
 function appendCol(selector, id, col) {
     $(selector).append("<div class='col" + col + "' id='" + id + "'></div>");
 }
@@ -19,12 +19,22 @@ function googleQuery(title) {
     //     createCol();
     // });
     $.get(queryURL).then(function(response) {
-        console.log(response);
         var books = response.items;
-        console.log(book);
-        appendRow(".container", "searchResults");
+        console.log(books);
+        //create new row and column for results
+        appendRow(".container");
+        appendCol(".row:last-of-type", "results-col");
+        $("#results-col").append("<ul id='results'></ul>")
         for (var i = 0; i < books.length; i++) {
-            //TODO display book info
+            var book = books[i].volumeInfo;
+            var thumbnail = book.imageLinks.smallThumnail;
+            var reviews = book.averageRating;
+            var authors = book.authors; //LOOP THROUGH
+            var pageCount = book.pageCount;
+            var publishDate = book.publishedDate;
+            var title = book.title;
+            $("#results").append("<li id='book" + i + "'></li>");
+            $("#book" + i).html("<h3 id='book" + i + "title'>" + title + "</h3>");
         }
     });
 }
