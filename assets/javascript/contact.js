@@ -24,13 +24,11 @@
  
 
  
-  // 3. Display train information that is already in the database
-  // Create Firebase event for retrieving a train from the database and add row in the html when a user adds an entry
 
  
  // 5. Button for adding contact info/message
   $("#submitContact").on("click", function() {
-      alert("helloworld")
+     
   event.preventDefault();
 
     // Grabs user input
