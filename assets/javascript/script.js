@@ -27,14 +27,23 @@ function googleQuery(title) {
         $("#results-col").append("<ul id='results'></ul>")
         for (var i = 0; i < books.length; i++) {
             var book = books[i].volumeInfo;
-            var thumbnail = book.imageLinks.smallThumnail;
-            var reviews = book.averageRating;
+            var thumbnail = book.imageLinks.smallThumbnail;
+             var reviews = book.averageRating;
             var authors = book.authors; //LOOP THROUGH
             var pageCount = book.pageCount;
             var publishDate = book.publishedDate;
             var title = book.title;
+            var description = book.description;
             $("#results").append("<li id='book" + i + "'></li>");
-            $("#book" + i).html("<h3 id='book" + i + "title'>" + title + "</h3>");
+            $("#book" + i).html(`
+                <h3 id="book${i}title">${title}</h3>
+                <img src="${thumbnail}" class="book-image" />
+                <p class="book-description">Description: ${description}</p>
+                <p class="book-authors">Author: ${authors}</p>
+                <p class="book-rating">Rating: ${reviews}</P>
+                <p class="book-published">First Published date: ${publishDate}</p>  
+            `);
+            //"<h3 id='book" + i + "title'>" + title + "</h3>");
         }
     });
 }
@@ -50,3 +59,4 @@ $(document).on("click", "#searchBtn", function() { //TODO: get element ID
     // googleQuery($("#inlineFormInput").text().trim());
     googleQuery(title);
 })
+
