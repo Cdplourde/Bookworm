@@ -122,7 +122,6 @@ margin-bottom: 20px;
     text-align: center;
     height: 265px;
     width: 240px;
-    background-color: pink;
     border: 2px solid black;
     padding: 3px;
     margin: 5px;
@@ -154,14 +153,44 @@ margin-bottom: 20px;
     margin-left: 25px;
 }
 
-.book-results-col img {
+.resultImages {
     width: 100px;
     height: 160px;
     border: 1px solid black;
 }
 
+/* .imageLarge {
+    width: 200px;
+    height: 320px;
+} */
+
 .fa-plus {
     position: absolute;
     top: 7px;
     right: 7px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.results-container h2 {
+    margin-bottom: 25px;
+}
+
+#description {
+    font-size: 0.9em;
+}
+
+#results-row3 p {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#results-row4 button {
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #dc3545;
+    color: white;
 }
