@@ -32,7 +32,7 @@ function googleQuery(title) {
             var books = response.items;
             //create new row and column for results
             var numRows = 1;
-            var numCols = books.length;
+            var numCols = response.items.length;
             for (var i = 1; i < numRows + 1; i++) {
                 appendRow(".container", "results-row" + i);
                 for (var j = 1; j < numCols + 1; j++) {
@@ -48,19 +48,12 @@ function googleQuery(title) {
                 //grab key names to verify certain keys exist
                 var objKeys = Object.keys(book);
                 console.log(book);
-                if (objKeys.indexOf("imageLinks") !== -1) {
+                // if (objKeys.indexOf("imageLink") !== -1) {
                     var thumbnail = book.imageLinks.smallThumbnail;
-                }
-                else {
-                    var thumbnail = "https://store.lexisnexis.com.au/__data/media/catalog/thumb//placeholder.jpg";
-                }
+                    console.log(thumbnail);
+                // };
                 var reviews = book.averageRating;
-                if (objKeys.indexOf("authors") !== -1) {
-                    var author = book.authors[0];
-                }
-                else {
-                    var author = "No Author Listed"
-                }
+                var author = book.authors[0];
                 var pageCount = book.pageCount;
                 var publishDate = book.publishedDate;
                 var title = book.title;
@@ -76,7 +69,7 @@ function googleQuery(title) {
         }
         else {
             //if no results are found tell the user
-            appendRow(".container", "results-row1");
+            appendRow(".container", "results-row");
             appendCol(".row:last-of-type", "results-col", "book-results-col");
             $("#results-col").append("<h2>No results! :-(</h2>")
         }
