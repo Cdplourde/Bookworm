@@ -223,7 +223,7 @@ $(document).on("click", ".book-results-col", function() {
     $("#results-row2").after("<div class='row' id='results-row3'></div>")
     $("#results-row3").append("<p>Author: " + bookArr[bookNum].bookAuthor);
     $("#results-row3").append("<p>Pages: " + bookArr[bookNum].bookPages);
-    $("#results-row3").append("<p>Rating: " + bookArr[bookNum].bookRating);
+    $("#results-row3").append("<p>Rating: " + bookArr[bookNum].bookRating + " / 5");
     $("#results-row3").append("<p>Published: " + bookArr[bookNum].bookPublished);
     $("#results-row3").after("<div class='row' id='results-row4'></div>")
     $("#results-row4").append("<button class='btn btn-default'>Rent Hard Copy");
