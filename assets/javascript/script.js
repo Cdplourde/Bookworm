@@ -1,3 +1,4 @@
+var isbn;
 //this array holds the book information from the api calls
 var bookArr = [{
     bookTitle: "",
@@ -114,6 +115,14 @@ function createResults() {
 
 }
 
+function booksrunQuery(isbn) { //TODO finish API call
+    var queryURL = "http://booksrun.com/api/price/buy/" + isbn + "?key=z2q4intug8z3yvnfv87e";
+    $.get(queryURL)
+    .done(function(response) {
+        console.log(response);
+    });
+}
+
 function googleQuery(title) {
     var queryURL = 'https://www.googleapis.com/books/v1/volumes?q=' + title;
     $.get(queryURL)
@@ -191,10 +200,6 @@ function googleQuery(title) {
             $("#results-col").append("<h2>No results! :-(</h2>")       
         }
     });
-}
-
-function semanticQuery(title) {
-
 }
 
 //search click event

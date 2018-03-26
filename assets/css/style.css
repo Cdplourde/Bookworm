@@ -20,6 +20,16 @@ nav .nav-link:hover {
     border-bottom: 4px solid #ffc107;
 }
 
+.card {
+    margin: 20px;
+    background-color: ;
+}
+
+.card .btn {
+    background-color: #dc3545!important;
+    color: white;
+}
+
 .page-wrapper {
     position: relative;
     min-height: 100%;
@@ -27,11 +37,27 @@ nav .nav-link:hover {
 }
 
 .showcase {
-    background-color: white;
+    text-align: center;
     background: url("https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb");
     min-height: 185px;
-    opacity: 0.6;
+    opacity: 0.5;
     border: 2px solid black;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+    font-size: 3.2em;
+}
+
+.about-wrapper {
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+.about-wrapper p {
+    margin: 0px;
 }
 
 .container {
@@ -40,7 +66,7 @@ nav .nav-link:hover {
     margin: 0px;
     padding: 0px;
     max-width: 100%!important;
-    min-height: calc(100vh - 275px);
+    min-height: calc(100vh - 280px);
 }
 
 .btn-lg {
@@ -172,6 +198,7 @@ margin-bottom: 20px;
 
 .row {
     justify-content: center;
+    text-align: center;
 }
 
 .results-container h2 {
@@ -183,9 +210,9 @@ margin-bottom: 20px;
 }
 
 #results-row3 p {
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-top: 20px!important;
+    margin-left: 30px!important;
+    margin-right: 30px!important;
 }
 
 #results-row4 button {
