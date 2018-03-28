@@ -91,6 +91,7 @@ h1 {
     background: url("../images/sprinkles.png");
     margin: 0px;
     padding: 0px;
+    padding-bottom: 60px;
     max-width: 100%!important;
     min-height: calc(100vh - 280px);
 }
