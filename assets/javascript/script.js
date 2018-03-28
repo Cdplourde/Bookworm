@@ -111,10 +111,6 @@ function appendCol(selector, id, colClass, col, data) {
     $(selector).append("<div class='" + colClass + " col" + col + "' id='" + id + "' data-booknumber = '" + data + "'></div>");
 }
 
-function createResults() {
-
-}
-
 function booksrunQuery(isbn) { //TODO finish API call
     var queryURL = "http://booksrun.com/api/price/buy/" + isbn + "?key=z2q4intug8z3yvnfv87e";
     $.get(queryURL)

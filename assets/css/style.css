@@ -30,6 +30,26 @@ nav .nav-link:hover {
     color: white;
 }
 
+form .btn {
+    color: white;
+}
+
+.contact-wrapper {
+    max-width: 1000px;
+    margin: 0px auto;
+    background-color: rgba(255, 255, 224, 0.688);
+    border: 2px solid black;
+    padding: 30px;
+    padding-top: 0px;
+    position: relative;
+    top: 30px;
+}
+
+.contact-wrapper .btn{
+    margin-top: 10px;
+    background-color: #dc3545;
+}
+
 .page-wrapper {
     position: relative;
     min-height: 100%;
@@ -51,13 +71,19 @@ h1 {
     font-size: 3.2em;
 }
 
-.about-wrapper {
+.about-row {
     max-width: 600px;
-    margin: 0px auto;
+    background-color: rgba(255, 255, 224, 0.688);
+    border: 2px solid black;
+    margin: auto;
+    position: relative;
+    top: 30px;
 }
 
-.about-wrapper p {
+.about-row p {
     margin: 0px;
+    padding: 15px;
+    font-size: 1.2em;
 }
 
 .container {
@@ -67,6 +93,27 @@ h1 {
     padding: 0px;
     max-width: 100%!important;
     min-height: calc(100vh - 280px);
+}
+
+.panel-primary {
+    margin: 20px 280px 0px 280px;
+    background-color: rgba(255, 255, 224, 0.688);
+    border: 2px solid black;
+    padding: 30px;
+    min-width: 500px;
+}
+
+td input {
+    width: 40px!important;
+}
+
+.panel-title{
+    margin-bottom: 40px;
+}
+
+.rating {
+    position: relative;
+    left: 20px;
 }
 
 .btn-lg {
@@ -184,11 +231,6 @@ margin-bottom: 20px;
     height: 160px;
     border: 1px solid black;
 }
-
-/* .imageLarge {
-    width: 200px;
-    height: 320px;
-} */
 
 .fa-plus {
     position: absolute;
